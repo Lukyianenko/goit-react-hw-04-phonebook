@@ -1,7 +1,7 @@
 import { Component } from "react";
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
-import AddContscts from './BookContacts/AddContact';
+import {AddContscts} from './BookContacts/AddContact';
 import { ListContacts } from './BookContacts/ListContacts';
 import { Filter } from './BookContacts/FilterContacts';
 import { Title } from './BookContacts/BookContacts.styled';
@@ -14,7 +14,6 @@ class App extends Component {
 
   onSubmitAddNewContact = (contact) => {
     const includesName = this.state.contacts.map(item => {return (item.name.toLowerCase())});
-    console.log(includesName);
     if(includesName.includes(contact.name.toLowerCase())) {
       alert(`${contact.name} is already in contacts`)
           }  else {
